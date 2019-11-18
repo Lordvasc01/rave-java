@@ -16,6 +16,7 @@ Services implemented are:
 - Subscriptions
 - Bank payments
 - Split Payments
+- Transfers
 - Subaccount Management
 
 ---
@@ -41,7 +42,7 @@ Add this dependency to your project's POM:
 <dependency>
  <groupId>com.flutterwave</groupId>
     <artifactId>Rave-Java</artifactId>
-    <version>1.03</version>
+    <version>1.04</version>
 </dependency>
 ```
 
@@ -49,7 +50,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```java
-compile("com.flutterwave:Rave-Java:1.03")
+compile("com.flutterwave:Rave-Java:1.04")
 ```
 
 ---
@@ -160,6 +161,117 @@ mobilemoneyPayload.setPublic_key(pub_key);
 String response = mobileMoney.domobilemoney(mobilemoneyPayload);
 
 return response; 
+```
+
+## Transfers(African Banks)
+```java
+transfers transfers = new transfers();
+transferPayload transferPayload = new transferPayload();
+transferPayload.setAccount_bank(account_bank);
+transferPayload.setAccount_number(account_number);
+transferPayload.setAmount(amount);
+transferPayload.setSeckey(seckey);
+transferPayload.setNarration(narration);
+transferPayload.setCurrency(currency);
+transferPayload.setReference(reference);
+transferPayload.setBeneficiary_name(beneficiary_name);
+transferPayload.setDestination_branch_code(destination_branch_code);
+
+String response = transfers.dotransfer(transferPayload);
+```
+
+## Transfers
+```java
+transfers transfers = new transfers();
+transferPayload transferPayload = new transferPayload();
+transferPayload.setAccount_bank(account_bank);
+transferPayload.setAccount_number(account_number);
+transferPayload.setAmount(amount);
+transferPayload.setSeckey(seckey);
+transferPayload.setNarration(narration);
+transferPayload.setCurrency(currency);
+transferPayload.setReference(reference);
+transferPayload.setBeneficiary_name(beneficiary_name);
+transferPayload.setDestination_branch_code(destination_branch_code);
+
+List<metaTransferpayload> list = new ArrayList<>();
+
+//please change forloop to suit your need
+for (int i = 0; i <=0; i++) {
+metaTransferpayload metaTransferpayload = new metaTransferpayload();
+metaTransferpayload.setAccountNumber(AccountNumber);
+metaTransferpayload.setRoutingNumber(RoutingNumber);
+metaTransferpayload.setSwiftCode(SwiftCode);
+metaTransferpayload.setBankName(BankName);
+metaTransferpayload.setBeneficiaryName(BeneficiaryName);
+metaTransferpayload.setBeneficiaryAddress(BeneficiaryAddress);
+metaTransferpayload.setBeneficiaryCountry(BeneficiaryCountry);
+
+list.add(metaTransferpayload);
+}
+
+//add metaTransferpayload to transferPayload
+transferPayload.setMeta(list);
+
+String response = transfers.dotransfer(transferPayload);
+```
+
+## Bulk Transfer
+```java
+transfers transfers = new transfers();
+bulkPayload bulkPayload = new bulkPayload();
+List<bulkdataPayload> list = new ArrayList<>();
+bulkPayload.setSeckey(seckey);
+bulkPayload.setTitle(title);
+
+//please change forloop to suit your need
+for (int i = 0; i <=0; i++) {
+bulkdataPayload bulkdataPayload = new bulkdataPayload();
+bulkdataPayload.setBank(Bank);
+bulkdataPayload.setAccount_number(Account_number);
+bulkdataPayload.setAmount(Amount);
+bulkdataPayload.setCurrency(Currency);
+bulkdataPayload.setNarration(Narration);
+bulkdataPayload.setReference(reference);
+
+list.add(bulkdataPayload);
+}
+
+//add bulkdataPayload to bulkPayload
+bulkPayload.setBulk_data(list);
+
+String response = transfers.dobulktransfer(bulkPayload);
+```
+
+# Retrive Bulk Transfer Status 
+```java
+transfers transfers = new transfers();
+String response = transfers.doRetriveBulkStatus(seckey, batch_id);
+```
+
+# Retrive Single Transfer Status 
+```java
+transfers transfers = new transfers();
+String response = transfers.doRetriveSingleStatus(seckey, ref);
+```
+
+# Account Resolve 
+```java
+AccountResolvePayload AccountResolvePayload = new AccountResolvePayload();
+
+AccountResolvePayload.setCountry(country);
+AccountResolvePayload.setCurrency(currency);
+AccountResolvePayload.setDestbankcode(code);
+AccountResolvePayload.setPBFPubKeypublickey);
+AccountResolvePayload.setRecipientaccount(account);
+        
+String response = new AccountResolve().doAccountResolve(AccountResolvePayload);
+```
+
+# Get BankList 
+```java
+transfers transfers = new transfers();
+String response = transfers.doGetBankList(country, publickey);
 ```
 
 ## QR code
