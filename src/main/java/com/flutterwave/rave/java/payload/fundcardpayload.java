@@ -85,7 +85,7 @@ public class fundcardpayload {
 //	"id": "660bae3b-333c-410f-b283-2d181587247f",
 //	"amount": "20",
 //	"debit_currency": "USD",
-//	"secret_key": "FLWSECK-e6db11d1f8a6208de8cb2f94e293450e-X"
+//	"secret_key": "FLWSECK-xxxxxxxxxxxxxxxxxxxxx-X"
 //}
     
     private String id;
