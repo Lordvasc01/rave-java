@@ -194,7 +194,7 @@ public class ebillpayload {
     }
     
 //    	{
-//      "SECKEY": "FLWSECK-e6db11d1f8a6208de8cb2f94e293450e-X",
+//      "SECKEY": "FLWSECK-xxxxxxxxxxxxxxxxxxxxx-X",
 //      "accountnumber": "2918282737",
 //      "narration": "test",
 //      "numberofunits": 1,
@@ -207,7 +207,7 @@ public class ebillpayload {
 //		}
     
 //    	{
-//      "SECKEY": "FLWSECK-e6db11d1f8a6208de8cb2f94e293450e-X",
+//      "SECKEY": "FLWSECK-xxxxxxxxxxxxxxxxxxxxx-X",
 //      "reference": "RVEBLS-6DB2D191EC44-134",
 //      "currency": "NGN",
 //      "amount": 3000
