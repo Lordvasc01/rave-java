@@ -85,7 +85,7 @@ public class settlementpayload {
 //			"page": 1,
 //			"limit": 10,
 //			"status": "completed",
-//			"seckey": "FLWSECK-e6db11d1f8a6208de8cb2f94e293450e-X"
+//			"seckey": "FLWSECK-xxxxxxxxxxxxxxxxxxxxx-X"
 //		}
     
     private String page;
