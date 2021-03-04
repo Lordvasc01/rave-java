@@ -155,7 +155,7 @@ public class transferPayload {
 //  "account_bank": "044",
 //  "account_number": "0690000044",
 //  "amount": 500,
-//  "seckey": "FLWSECK-e6db11d1f8a6208de8cb2f94e293450e-X",
+//  "seckey": "FLWSECK-xxxxxxxxxxxxxxxxxxxxx-X",
 //  "narration": "New transfer",
 //  "currency": "NGN",
 //  "reference": "mk-902837-jk",
@@ -164,7 +164,7 @@ public class transferPayload {
 //    
 //    {
 //  "amount": 2000,
-//  "seckey": "FLWSECK-e6db11d1f8a6208de8cb2f94e293450e-X",
+//  "seckey": "FLWSECK-xxxxxxxxxxxxxxxxxxxxx-X",
 //  "narration": "New transfer",
 //  "currency": "USD",
 //  "reference": "rave-transfer-15208080003460029376",
@@ -186,7 +186,7 @@ public class transferPayload {
 //  "account_bank": "MPS",
 //  "account_number": "2540782773934",
 //  "amount": 50,
-//  "seckey": "FLWSECK-e6db11d1f8a6208de8cb2f94e293450e-X",
+//  "seckey": "FLWSECK-xxxxxxxxxxxxxxxxxxxxx-X",
 //  "narration": "New transfer",
 //  "currency": "KES",
 //  "reference": "mk-902837-jk",
