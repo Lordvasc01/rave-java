@@ -235,7 +235,7 @@ public class qrcodePayload {
         this.email = email;
     }
 //    {
-//  "PBFPubKey": "FLWPUBK-981ae1ed1ef801254329cb7b318a0ea5-X",
+//  "PBFPubKey": "FLWPUBK-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-X",
 //  "amount": 40,
 //  "txRef": "m3s4m0c1526722407366",
 //  "is_qr": "qr",
